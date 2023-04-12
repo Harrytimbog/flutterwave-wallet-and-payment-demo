@@ -1,5 +1,5 @@
 ---
-displayName: WALLET-DEMO-WITH-FLUTTERWAVE
+displayName: FLUTTERWAVE-WALLET-AND-PAYMENT-DEMO
 description: Payments have gone digital now, It is evident that payment for goods and services happening over the internet is here to stay
 labels: ["node.js", "flutterwave", "express.js"]
 ---
@@ -9,13 +9,13 @@ labels: ["node.js", "flutterwave", "express.js"]
 Clone the project
 
 ```console
-git clone https://github.com/Harrytimbog/wallet-payment-demo-with-flutterwave.git
+git clone https://github.com/Harrytimbog/flutterwave-wallet-and-payment-demo.git
 ```
 
 Go to the project directory
 
 ```console
-cd wallet-payment-demo-with-flutterwave
+cd flutterwave-wallet-and-payment-demo
 ```
 
 ## Environmental Variables
