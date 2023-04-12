@@ -1,3 +1,5 @@
+# FLUTTERWAVE-WALLET-AND-PAYMENT-DEMO
+
 ---
 displayName: FLUTTERWAVE-WALLET-AND-PAYMENT-DEMO
 description: Payments have gone digital now, It is evident that payment for goods and services happening over the internet is here to stay
@@ -32,7 +34,7 @@ FLUTTERWAVE_PUBLIC_KEY
 
 FLUTTERWAVE_V3_SECRET_KEY
 
-Start Server
+## Start Server
 
 ```console
 npm run dev
