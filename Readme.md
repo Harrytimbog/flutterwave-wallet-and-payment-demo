@@ -4,6 +4,8 @@ description: Payments have gone digital now, It is evident that payment for good
 labels: ["node.js", "flutterwave", "express.js"]
 ---
 
+# FLUTTERWAVE-WALLET-AND-PAYMENT-DEMO
+
 ## Run Locally
 
 Clone the project
