@@ -3,6 +3,8 @@ require("./config/database").connect();
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const path = require("path");
+const axios = require("axios");
 
 const app = express();
 
@@ -101,6 +103,31 @@ app.post("/login", async (req, res) => {
   } catch (err) {
     console.log(err);
   }
+});
+
+app.get("/pay", (req, res) => {
+  res.sendFile(path.join(__dirname + "/index.html"));
+  //__dirname : It will resolve to your project folder.
+});
+
+app.get("/response", async (req, res) => {
+  const { transaction_id } = req.query;
+
+  // URL with transaction ID of which will be used to confirm transaction status
+  const url = `https://api.flutterwave.com/v3/transactions/${transaction_id}/verify`;
+
+  // Network call to confirm transaction status
+  const response = await axios({
+    url,
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: `${process.env.FLUTTERWAVE_V3_SECRET_KEY}`,
+    },
+  });
+
+  console.log(response.data.data);
 });
 
 module.exports = app;
