@@ -23,9 +23,13 @@ cd flutterwave-wallet-and-payment-demo
 ### .env
 
 MONGO_URI
+
 API_PORT
+
 TOKEN_KEY
+
 FLUTTERWAVE_PUBLIC_KEY
+
 FLUTTERWAVE_V3_SECRET_KEY
 
 Start Server
