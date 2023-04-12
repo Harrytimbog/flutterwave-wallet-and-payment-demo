@@ -132,6 +132,13 @@ app.get("/response", async (req, res) => {
 
   const { status, currency, id, amount, customer } = response.data.data;
 
+  // check if transaction id already exist
+  const transactionExist = await Transaction.findOne({ transactionId: id });
+
+  if (transactionExist) {
+    return res.status(409).send("Transaction Already Exist");
+  }
+
   // check if customer exist in our database
   const user = await User.findOne({ email: customer.email });
 
